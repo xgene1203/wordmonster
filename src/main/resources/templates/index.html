@@ -1,0 +1,32 @@
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf 语法</title>
+</head>
+<body>
+<form method="get" action="/view/exam">
+    <table>
+        <tr>
+            <td>Count:</td>
+            <td><input type="number" id="count" name="count" value=10 /></td>
+        </tr>
+        <tr>
+            <td>Category:</td>
+            <td><select id="category" name="category">
+                <option value="CAP_I" selected="selected">CAP_I</option>
+                <option value="CAP_II">CAP_II</option>
+                <option value="SAT_I">SAT_I</option>
+                <option value="SAT_II">SAT_II</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Submission" />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
