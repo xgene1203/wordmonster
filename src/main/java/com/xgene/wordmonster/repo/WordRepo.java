@@ -1,10 +1,8 @@
 package com.xgene.wordmonster.repo;
 
 import com.xgene.wordmonster.model.Category;
-import com.xgene.wordmonster.model.WordEntity;
+import com.xgene.wordmonster.model.entity.WordEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;

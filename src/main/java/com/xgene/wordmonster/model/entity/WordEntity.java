@@ -1,10 +1,6 @@
-package com.xgene.wordmonster.model;
+package com.xgene.wordmonster.model.entity;
 
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.TypeDef;
-import org.hibernate.metamodel.model.convert.internal.NamedEnumValueConverter;
-import org.springframework.data.repository.query.Param;
-import org.springframework.data.rest.core.annotation.RestResource;
+import com.xgene.wordmonster.model.Category;
 
 import javax.persistence.*;
 import java.io.Serializable;

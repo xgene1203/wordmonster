@@ -2,14 +2,13 @@ package com.xgene.wordmonster.service;
 
 import com.xgene.wordmonster.model.Category;
 import com.xgene.wordmonster.model.SingleChoice;
-import com.xgene.wordmonster.model.WordEntity;
+import com.xgene.wordmonster.model.entity.WordEntity;
 import com.xgene.wordmonster.repo.WordRepo;
 import org.apache.commons.lang3.RandomUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 public class ExamService {

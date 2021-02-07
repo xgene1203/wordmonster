@@ -32,6 +32,15 @@ dependencies {
     compile 'org.thymeleaf:thymeleaf:3.0.9.RELEASE'
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml
+//    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.12.1'
+// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.12.1'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.12.1'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+
     compileOnly('org.projectlombok:lombok')
 //    implementation 'org.flywaydb:flyway-core'
     runtimeOnly 'org.postgresql:postgresql'
