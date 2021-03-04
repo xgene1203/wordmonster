@@ -1,28 +1,37 @@
+<!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
-    <title>Thymeleaf 语法</title>
+    <title>測驗</title>
+    <link rel="stylesheet" type="text/css" th:href="@{../css/bootstrap.min.css}">
+    <script type="text/javascript" th:src="@{../js/bootstrap.min.js}"></script>
 </head>
+
 <body>
 
 
 <div class="container">
+    <form action="#" th:action="@{/view/result}" th:object="${userResultReq}" method="post">
+        <input type="hidden" name="userId" th:value="${param.userId}"/>
+        <input type="hidden" name="category" th:value="${param.category}"/>
+        <input type="hidden" name="count" th:value="${param.count}"/>
+        <div class="col-sm-12 mt-5">
+            <label th:each="exam,iter : ${exams}">
+                <div class="row" th:text="'Question:'+ ${iter.count}+' '+${exam.getEnglish()}"></div>
+                <input type="radio"
+                       th:each="option : ${exam.getChineseQuestions()}"
+                       th:text="${option}"
+                       th:value="${option}"
+                       th:name="${exam.getId()}"
+                />
+                <input type="hidden" th:name="${exam.getId()}" th:value="${exam.getChinese()}"/>
+            </label>
+            <br/>
+        </div>
+        <button th:type="submit">提交</button>
+    </form>
 
-    <div class="col-sm-12 mt-5">
-        <label th:each="exam,iter : ${exams}">
-            <div class="row" th:text="'Question:'+ ${iter.count}">
-            </div>
-            <input type="radio" th:name="'exam'+${iter.count}"
-                   th:each="option : ${exam.getChineseQuestions()}"
-                   th:text="${option}"
-                   th:value="${option}"
-                   th:field="*{exams}"
-            />
-        </label>
-
-        <br/>
-    </div>
 </div>
 </body>
 </html>
